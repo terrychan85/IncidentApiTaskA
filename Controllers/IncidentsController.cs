@@ -46,16 +46,17 @@ namespace IncidentApiTaskA.Controllers
                 DateReported = now
             };
             _incidents.Add(incident);
-            return CreatedAtAction(nameof(GetIncident), new { id = incident.Id }, new { id = incident.Id, message = "Incident created successfully." });
+            return Ok( new { Incident = incident, message = "Incident created successfully." } );
+            //return CreatedAtAction(nameof(GetIncident), new { id = incident.Id }, new { id = incident.Id, message = "Incident created successfully." });
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetIncident(int id)
-        {
-            var incident = _incidents.FirstOrDefault(i => i.Id == id);
-            if (incident == null) return NotFound();
-            return Ok(incident);
-        }
+        //[HttpGet("{id}")]
+        //public IActionResult GetIncident(int id)
+        //{
+        //    var incident = _incidents.FirstOrDefault(i => i.Id == id);
+        //    if (incident == null) return NotFound();
+        //    return Ok(incident);
+        //}
     }
 
     public class IncidentCreateRequest

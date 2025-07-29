@@ -1,4 +1,5 @@
-IncidentApiTaskA_HostAddress: http://localhost:5148
+Swagger UI was added so you can easily test and explore the Incident API directly from your browser, without needing extra tools.
+When you run the project (dotnet run), just open the application URL (e.g., http://localhost:5148) and you’ll see an interactive homepage where you can try out all API endpoints and view live documentation
 
 ---
 
